@@ -10,6 +10,8 @@ namespace BobzBurger.Pages.Admin
 {
     public class AddEditRecipeModel : PageModel
     {
+        private readonly IRecipesService recipesService;
+
         [FromRoute]
         public long? Id { get; set; }
 
@@ -17,10 +19,23 @@ namespace BobzBurger.Pages.Admin
         {   
             get { return Id == null;  }
         }
+        [BindProperty]
         public Recipe Recipe { get; set; }
-        public void OnGet()
-        {
 
+        public AddEditRecipeModel(IRecipesService recipesService)
+        {
+            this.recipesService = recipesService;
+        }
+        public async Task OnGet()
+        {
+            Recipe = await recipesService.FindAsync(Id.GetValueOrDefault()) ?? new Recipe();
+        }
+
+        public async Task<IActionResult> OnPost()
+        {
+            Recipe.Id = Id.GetValueOrDefault();
+            await recipesService.SaveAsync(Recipe);
+            return RedirectToPage("/Recipe", new { id = Id });
         }
     }
 }
