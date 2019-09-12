@@ -1,8 +1,8 @@
 ﻿@page "{id?}"
 @model BobzBurger.Pages.Admin.AddEditRecipeModel
 @{
-    ViewData["Title"] = "AddEditRecipe";
+    ViewData["Title"] = Model.IsNewRecipe ? "New Recipe" : "Edit Recipe";
 }
 
-@Model
+<strong>Id : @Model.Id </strong>
 
