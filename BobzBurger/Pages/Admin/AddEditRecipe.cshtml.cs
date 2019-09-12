@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using BobzBurger.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace BobzBurger.Pages.Admin
 {
@@ -21,6 +22,8 @@ namespace BobzBurger.Pages.Admin
         }
         [BindProperty]
         public Recipe Recipe { get; set; }
+        [BindProperty]
+        public IFormFile Image { get; set; }
 
         public AddEditRecipeModel(IRecipesService recipesService)
         {
@@ -33,9 +36,30 @@ namespace BobzBurger.Pages.Admin
 
         public async Task<IActionResult> OnPost()
         {
-            Recipe.Id = Id.GetValueOrDefault();
-            await recipesService.SaveAsync(Recipe);
-            return RedirectToPage("/Recipe", new { id = Id });
+            var recipe = await recipesService.FindAsync(Id.GetValueOrDefault()) ?? new Recipe();
+
+            recipe.Name = Recipe.Name;
+            recipe.Description = Recipe.Description;
+            recipe.Ingredients = Recipe.Ingredients;
+            
+            if(Image != null)
+            {
+                using (var stream = new System.IO.MemoryStream())
+                {
+                    await Image.CopyToAsync(stream);
+                    recipe.Image = stream.ToArray();
+                    recipe.ImageContentType = Image.ContentType;
+                }
+            }
+
+            await recipesService.SaveAsync(recipe);
+            return RedirectToPage("/Recipe", new { id = recipe.Id });
+        }
+
+        public async Task<IActionResult> OnPostDelete()
+        {
+            await recipesService.DeleteAsync(Id.Value);
+            return RedirectToPage("/Index");
         }
     }
 }
