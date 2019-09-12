@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TopsyTurvyCakes.Models
+namespace BobzBurger.Models
 {
     public static class RecipesDbContextSeedData
     {
