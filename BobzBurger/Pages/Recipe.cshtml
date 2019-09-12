@@ -1,34 +1,32 @@
-﻿<div class="row recipe">
-
+﻿@page
+@using TopsyTurvyCakes.Models
+@{
+    var id = 1;
+    var recipeService = new RecipesService();
+    var recipes = await recipeService.GetAllAsync();
+}
+<div class="row recipe">
     <div class="col-md-8">
-
         <div class="col-md-12">
-
             <span class="description">
                 [ DESCRIPTION ]
             </span>
-
             <hr />
         </div>
-
         <div class="ingredients col-md-4">
             <h4>Ingredients</h4>
             <ul>
                 <li>[INGREDIENT]</li>
             </ul>
         </div>
-
         <div class="directions col-md-8">
             <h4>Directions</h4>
             <ol>
                 <li>[STEP]</li>
             </ol>
         </div>
-
     </div>
-
     <div class="col-md-4 text-right">
         <img class="img img-thumbnail" src="[IMAGE]" />
     </div>
-
 </div>

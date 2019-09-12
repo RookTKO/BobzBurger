@@ -1,4 +1,9 @@
 ﻿@page
+@using TopsyTurvyCakes.Models
+@{
+    var recipeService = new RecipesService();
+    var recipes = await recipeService.GetAllAsync();
+}
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,22 +25,22 @@
                     <li><a href="/Contact">Contact</a></li>
                 </ul>
                 <!-- <ul class="nav nav-pills">
-        <li>
-            @if (!User.Identity.IsAuthenticated)
-            {
-                <a href="/Account/Login">Login</a>
-            } else
-            {
-                <form method="post">
-                    <div class="input-group">
-                        <span>@User.Identity.IsAuthenticated</span>
-                        <button typeof="submit" class="btn btn-link">Logout</button>
-                    </div>
-                </form>
-            }
+                    <li>
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <a href="/Account/Login">Login</a>
+                        } else
+                        {
+                            <form method="post">
+                                <div class="input-group">
+                                    <span>@User.Identity.IsAuthenticated</span>
+                                    <button typeof="submit" class="btn btn-link">Logout</button>
+                                </div>
+                            </form>
+                        }
 
-        </li>
-    </ul>-->
+                    </li>
+                </ul>-->
             </nav>
         </div>
         <div class="row">
@@ -45,12 +50,14 @@
     <div class="container">
         <div class="row recipes">
 
-            @foreach (var recipe in new[] { " Birthday Cake for Fido", "Pumpkin Pie", "apple turnover" })
+
+            <!--foreach (var recipe in new[] { " Birthday Cake for Fido", "Pumpkin Pie", "apple turnover" }) -->
+            @foreach (var recipe in recipes)
             {
                 <div class="recipe col-md-4">
-                    <img class="img img-thumbnail" src="~/Images/burger.jpg" />
-                    <h3><a href="/Recipe">@recipe</a></h3>
-                    <p>Maybe it's just me, but I don't get the pun in this one at all.</p>
+                    <img class="img img-thumbnail" src="@recipe.GetInlineImageSrc()" />
+                    <h3><a href="/Recipe">@recipe.Name</a></h3>
+                    <p>@recipe.Description</p>
                 </div>
 
             }
