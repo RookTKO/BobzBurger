@@ -1,7 +1,6 @@
 ﻿@page
 @{
-    var recipeService = new RecipesService();
-    var recipes = await recipeService.GetAllAsync();
+    var recipes = await RecipesService.GetAllAsync();
 }
 @section Title {
     <h2 class="title">My Favorite Recipes</h2>
