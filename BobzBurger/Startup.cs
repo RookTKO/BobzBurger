@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using BobzBurger.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace BobzBurger
 {
@@ -16,7 +17,13 @@ namespace BobzBurger
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc(); //dependency injection
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+            services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AuthorizeFolder("/Admin");
+                options.Conventions.AuthorizeFolder("/Account");
+                options.Conventions.AllowAnonymousToPage("/Account/Login");
+            }); //dependency injection
             services.AddTransient<IRecipesService, RecipesService>();
         }
 
@@ -28,6 +35,7 @@ namespace BobzBurger
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
         }

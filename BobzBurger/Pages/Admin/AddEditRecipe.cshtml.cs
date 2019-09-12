@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using BobzBurger.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BobzBurger.Pages.Admin
 {
+    [Authorize]
     public class AddEditRecipeModel : PageModel
     {
         private readonly IRecipesService recipesService;
@@ -36,6 +38,10 @@ namespace BobzBurger.Pages.Admin
 
         public async Task<IActionResult> OnPost()
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
             var recipe = await recipesService.FindAsync(Id.GetValueOrDefault()) ?? new Recipe();
 
             recipe.Name = Recipe.Name;

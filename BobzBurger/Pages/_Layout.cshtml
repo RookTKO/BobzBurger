@@ -18,7 +18,23 @@
                     <li><a href="/Portfolio">Portfolio</a></li>
                     <li><a href="/Contact">Contact</a></li>
                 </ul>
-
+                <ul class="nav nav-pills">
+                    <li>
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <a href="/Account/Login">Login</a>
+                        }
+                        else
+                        {
+                            <form method="post" asp-page="/Account/Login" asp-page-handler="Logout">
+                                <div class="input-group">
+                                    <span>@User.Identity.Name</span>
+                                    <button type="submit" class="btn btn-link">Logout</button>
+                                </div>
+                            </form>
+                        }
+                    </li>
+                </ul>
             </nav>
         </div>
         <div class="row">
