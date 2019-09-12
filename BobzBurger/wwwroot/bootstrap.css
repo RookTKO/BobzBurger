@@ -4414,7 +4414,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 }
 
     .nav-pills > li > a {
-        border-radius: 4px
+        border-radius: 0px !important;
     }
 
     .nav-pills > li + li {

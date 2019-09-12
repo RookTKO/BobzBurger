@@ -19,11 +19,23 @@
                     <li><a href="/Portfolio">Portfolio</a></li>
                     <li><a href="/Contact">Contact</a></li>
                 </ul>
-                <ul class="nav nav-pills">
-                    <li>
-                        <a href="/Account/Login">Login</a>
-                    </li>
-                </ul>
+                <!-- <ul class="nav nav-pills">
+        <li>
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <a href="/Account/Login">Login</a>
+            } else
+            {
+                <form method="post">
+                    <div class="input-group">
+                        <span>@User.Identity.IsAuthenticated</span>
+                        <button typeof="submit" class="btn btn-link">Logout</button>
+                    </div>
+                </form>
+            }
+
+        </li>
+    </ul>-->
             </nav>
         </div>
         <div class="row">
@@ -33,11 +45,15 @@
     <div class="container">
         <div class="row recipes">
 
-            <div class="recipe col-md-4">
-                <img class="img img-thumbnail" src="~/Images/burger.jpg"/>
-                <h3><a href="/Recipe">Do Brussel Burger</a></h3>
-                <p>Maybe it's just me, but I don't get the pun in this one at all.</p>
-            </div>
+            @foreach (var recipe in new[] { " Birthday Cake for Fido", "Pumpkin Pie", "apple turnover" })
+            {
+                <div class="recipe col-md-4">
+                    <img class="img img-thumbnail" src="~/Images/burger.jpg" />
+                    <h3><a href="/Recipe">@recipe</a></h3>
+                    <p>Maybe it's just me, but I don't get the pun in this one at all.</p>
+                </div>
+
+            }
 
         </div>
 

@@ -1,11 +1,19 @@
 @import 'bootstrap.css';
 @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro%3Aregular%2Citalic%2C700%2C200%2C300%2C300italic%2C900%7CRaleway%3Aregular%2C700%2C200%2C300%2C900%26subset%3Dlatin%2C&ver=2.1.1');
 
+* {
+    --green_color: #95d244;
+    --yellow_color: rgb(244,244,35);
+    --red_color: #f0262a;
+    --blue_color: #9ac7e8;
+}
+
 body {
     color: #333;
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 1.625;
+    background-color: var(--green_color)
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -13,11 +21,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
+
     margin-top: 10px;
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(Images/border.png) 10 stretch;
+    background-color: var(--blue_color);
+    color: var(--red_color);
+
 }
 
 a {
-    color: #e74797;
+    color: var(--red_color);
 }
 
     a:hover {
@@ -50,8 +67,8 @@ header {
 
 .navbar {
     border-radius: 0;
-    border-bottom: 1px solid #777;
-    border-top: 1px solid #777;
+    border-bottom: 1px dashed black;
+    border-top: 1px dashed black;
     min-height: inherit;
 }
 
@@ -70,9 +87,11 @@ header {
         }
 
         .navbar a, .navbar .btn-link {
-            color: #333;
+            color: var(--red_color);
+            background-color: var(--yellow_color);
             letter-spacing: 2px;
             font-size: 12px;
+            margin: 1px 0px 1px 0px;
         }
 
             .navbar a.active {
@@ -80,7 +99,7 @@ header {
             }
 
         .navbar .nav {
-            width: 60%;
+            width: 50%;
             margin: auto;
             display: inline-table;
         }
@@ -92,7 +111,7 @@ header {
             }
 
         .navbar ul:last-child {
-            float: right;
+
             width: 100px;
         }
 
