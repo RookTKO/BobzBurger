@@ -93,13 +93,33 @@ body {
     margin-right: 15%;
 }
 
+.burgerBlackBoard {
+    margin-top: 10px;
+    border: 10px solid transparent;
+    padding: 0px;
+    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(Images/blackBoard.png) 10 stretch;
+    border-image-width: 9px;
+    background-image: url(Images/blackBoard.jpg);
+    color: white;
+    font-family: comica_regularregular
+}
+
+    .burgerBlackBoard p {
+        padding: 25px;
+    }
 a {
     color: var(--red_color);
 }
 
     a:hover {
-        color: #111;
+        color: white;
+        filter: drop-shadow(0 0 0.9rem lightblue);
+        text-decoration: underline;
+        text-decoration-style: wavy;
     }
+
 
 img[src=""] {
     visibility: hidden;

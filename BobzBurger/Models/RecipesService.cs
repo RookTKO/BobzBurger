@@ -11,7 +11,7 @@ namespace BobzBurger.Models
         public RecipesService()
         {
             var options = new DbContextOptionsBuilder<RecipesDbContext>()
-                .UseInMemoryDatabase("TopsyTurvyCakes")
+                .UseInMemoryDatabase("BobzBurger")
                 .Options;
 
             _context = new RecipesDbContext(options);
