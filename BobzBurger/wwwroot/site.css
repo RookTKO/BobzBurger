@@ -56,7 +56,8 @@ body {
 }
 
 .burgerPrice {
-    transform: rotate(-4deg);
+    transform: rotate(-8deg);
+    letter-spacing:8px;
     font-size: 38px;
     display: flex;
     justify-content: center;

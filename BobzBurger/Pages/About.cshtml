@@ -9,16 +9,4 @@
 
 <div class="row recipes">
 
-
-    <!--foreach (var recipe in new[] { " Birthday Cake for Fido", "Pumpkin Pie", "apple turnover" }) -->
-    @foreach (var recipe in recipes)
-    {
-        <div class="recipe col-md-4">
-            <img class="img img-thumbnail" src="@recipe.GetInlineImageSrc()" />
-            <h3><a asp-page="/Recipe" asp-route-id="@recipe.Id">@recipe.Name</a></h3>
-            <p>@recipe.Description</p>
-        </div>
-
-    }
-    <h3 class="burgerDay">Burger of the Day</h3>
 </div>
