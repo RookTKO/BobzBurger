@@ -9,20 +9,17 @@
         <div class="row">
             <h1 class="main-logo"><a href="/">Bob's Burgers</a></h1>
         </div>
-        <div class="row">
+        <div class="row ">
             <nav class="navbar">
-                <ul class="nav nav-pills">
+                <ul class="nav nav-pills ">
+                    <li><a class="active" href="/Index">Recipes</a></li>
+                    <li><a href="/Menu">Our Burgers</a></li>
+                    <li><a href="/Comments">Rate us!</a></li>
                     <li><a href="/About">About</a></li>
-                    <li><a href="/Blog">Blog</a></li>
-                    <li><a class="active" href="/">Recipes</a></li>
-                    <li><a href="/Portfolio">Portfolio</a></li>
-                    <li><a href="/Contact">Contact</a></li>
-                </ul>
-                <ul class="nav nav-pills">
                     <li>
                         @if (!User.Identity.IsAuthenticated)
                         {
-                            <a href="/Account/Login">Login</a>
+                            <a class="login" href="/Account/Login">Bob's Login</a>
                         }
                         else
                         {

@@ -5,22 +5,64 @@
     --green_color: #95d244;
     --yellow_color: rgb(244,244,35);
     --red_color: #f0262a;
-    --blue_color: #9ac7e8;
+    --blue_color: rgb(147,222,253);
+    --gray_color:rgb(102,105,112);
 }
 
+/** Fonts */
+@font-face {
+    font-family: cf_blackboard_personalregular;
+    src: url('fonts/cfblackboardpersonal-regula-webfont.woff2') format('woff2'), url('fonts/cfblackboardpersonal-regula-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: comica_regularregular;
+    src: url('fonts/comicaregular-webfont.woff2') format('woff2'), url('fonts/comicaregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: bobs_burgersregular;
+    src: url('fonts/bobs_burgers-webfont.woff2') format('woff2'), url('fonts/bobs_burgers-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     color: #333;
-    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 1.625;
-    background-color: var(--green_color)
+    background-image: url("Images/bg.png");
+    background-repeat: repeat;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway","Helvetica Neue",sans-serif;
+
+.burgerDay {
+    font-family: comica_regularregular;
+    transform: rotate(4deg);
+    font-size: 54px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
-h2 {
+.burgerSpecial {
+    font-size: 44px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.burgerPrice {
+    transform: rotate(-4deg);
+    font-size: 38px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.title {
 
     margin-top: 10px;
     border: 10px solid transparent;
@@ -29,10 +71,31 @@ h2 {
     -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
     border-image: url(Images/border.png) 10 stretch;
     background-color: var(--blue_color);
-    color: var(--red_color);
+    color: black;
+    font-family: bobs_burgersregular;
 
 }
 
+.blackBoard {
+    margin-top: 10px;
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(Images/blackBoard.png) 10 stretch;
+    border-image-width: 9px;
+    background-image: url(Images/blackBoard.jpg);
+    opacity: 0.9;
+    color: white;
+    font-family: comica_regularregular;
+    display: block;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+    .blackBoard:hover {
+        opacity: 0.93;
+    }
 a {
     color: var(--red_color);
 }
@@ -64,56 +127,64 @@ header {
         margin: 80px 0px -20px;
         color: rgba(0, 0, 0, 0);
     }
-
-.navbar {
-    border-radius: 0;
-    border-bottom: 1px dashed black;
-    border-top: 1px dashed black;
-    min-height: inherit;
+.nav-pills li {
+    border: 10px solid transparent;
+    -webkit-border-image: url(Images/navBackground.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(Images/navBackground.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(Images/navBackground.png) 10 stretch;
+    border-image-width: 9px !important;
+    background-color: var(--blue_color);
+    margin: 0px 5px;
+    display:inline-block !important;
 }
 
-    .navbar, .navbar .btn-link {
-        font-weight: 400;
-        font-family: "Source Sans Pro","Helvetica Neue",sans-serif;
-        text-transform: uppercase;
+    .nav-pills li a {
+        padding: 0px !important;
+        display: block !important;
     }
-
+        .nav-pills li a:hover {
+            background-color: var(--blue_color);
+            letter-spacing: 2px;
+            filter: drop-shadow(0 0 0.9rem lightblue);
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-shadow: 2px 2px 4px rgb(133,234,255),0 0 25px rgb(77,133,195), 0 0 5px rgb(133,190,255);
+        }
+.navbar {
+    min-height: inherit;
+    font-family: bobs_burgersregular;
+}
         .navbar form span {
             text-transform: none;
         }
 
-        .navbar .btn-link {
-            font-weight: 600;
-        }
 
-        .navbar a, .navbar .btn-link {
-            color: var(--red_color);
-            background-color: var(--yellow_color);
-            letter-spacing: 2px;
-            font-size: 12px;
-            margin: 1px 0px 1px 0px;
-        }
+
+    .navbar a, .navbar .btn-link {
+        color: black;
+        letter-spacing: 2px;
+        font-size: 28px;
+
+    }
+
 
             .navbar a.active {
                 font-weight: 800;
             }
 
         .navbar .nav {
-            width: 50%;
             margin: auto;
-            display: inline-table;
+            display: flex;
+            justify-content: center;
+
         }
 
-            .navbar .nav li {
-                display: table-cell;
-                width: 1%;
-                float: none;
-            }
+.login {
+    display: flex;
+    justify-content: flex-end;
+}
 
-        .navbar ul:last-child {
 
-            width: 100px;
-        }
 
 .recipes .recipe {
     height: 40em;
