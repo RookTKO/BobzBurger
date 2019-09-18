@@ -115,6 +115,10 @@ body {
     .burgerBlackBoard p {
         padding: 25px;
     }
+
+.banner {
+    margin-top: -1.8em;
+}
 a {
     color: var(--red_color);
 }

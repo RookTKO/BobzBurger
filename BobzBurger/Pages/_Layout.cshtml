@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <title>Bob's Burgers</title>
@@ -7,7 +8,12 @@
 <body>
     <header class="container site-header">
         <div class="row">
-            <h1 class="main-logo"><a href="/">Bob's Burgers</a></h1>
+            <h1 class="main-logo">
+                <a href="/">Bob's Burgers</a>
+                    <img class="banner" style="transform: rotate(1deg);" src="~/Images/reopening.png" />
+
+            </h1>
+  
         </div>
         <div class="row ">
             <nav class="navbar">
@@ -25,7 +31,7 @@
                         {
                             <form method="post" asp-page="/Account/Login" asp-page-handler="Logout">
                                 <div class="input-group">
-                                    <span>@User.Identity.Name</span>
+                                    @*<span>@User.Identity.Name</span>*@
                                     <button type="submit" class="btn btn-link">Logout</button>
                                 </div>
                             </form>
