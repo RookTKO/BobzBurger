@@ -32,20 +32,74 @@ namespace BobzBurger.Models
             return new Recipe[] {
                 new Recipe {
                     Name = "OLIVER-R TWIST",
-                    Description = "Pampering your pet with a birthday cake is a great way to celebrate, but there are careful considerations to make when deciding to share this two-legged ritual with your four-legged friends. For instance, chocolate is dangerous when consumed by our pets, and they may have allergies or sensitivities to other ingredients typically found in cake.",
+                    Description = "Want something to kick your shoes off your tippy toes? Try this twist!",
                     Image = File.ReadAllBytes(@"wwwroot\Images\burger1.png"),
                     ImageContentType = "image/jpeg",
                 },
                 new Recipe {
                     Name = "SIR LANSHALLOT",
-                    Description = "I thought it would be nice to break away from the traditional cake posts and share one of my favorite desserts to have during the fall. Pumpkin pie! This recipe is adapted from my grandmother’s cookbook.  She would stew her own pumpkin to make her pumpkin pies. My version uses canned pumpkin and lower fat milk, but tastes just as good as hers did growing up.",
+                    Description = "One word - Extremly Tasty.",
                     Image = File.ReadAllBytes(@"wwwroot\Images\burger2.png"),
                     ImageContentType = "image/jpeg",
                 },
                 new Recipe {
                     Name = "FRIED AND PREJUDICE",
-                    Description = "This classic sponge cake is easy to make, but has a sophisticated taste. The raspberries and fresh whipped cream keep it light, but rich at the same time.",
+                    Description = "Crispy, savory, salty. Who doesn't like fries? ",
                     Image = File.ReadAllBytes(@"wwwroot\Images\burger3.png"),
+                    ImageContentType = "image/jpeg",
+                },
+				                new Recipe {
+                    Name = "A BEET-CAR NAMED DESIRE",
+                    Description = "It was either this of some Beet it joke.",
+                    Image = File.ReadAllBytes(@"wwwroot\Images\burger4.png"),
+                    ImageContentType = "image/jpeg",
+                },
+				                new Recipe {
+                    Name = "SWEET DREAMS ARE MADE OF CHEESE",
+                    Description = "Three layers of cardiac arrest at your service!",
+                    Image = File.ReadAllBytes(@"wwwroot\Images\burger5.png"),
+                    ImageContentType = "image/jpeg",
+                },
+				                new Recipe {
+                    Name = "AH, AH, AH, AH STAYIN' A-CHIVE",
+                    Description = "Because normal onions were sold out.",
+                    Image = File.ReadAllBytes(@"wwwroot\Images\burger6.png"),
+                    ImageContentType = "image/jpeg",
+                },
+				                new Recipe {
+                    Name = "LICENSE TO KALE",
+                    Description = "No Kale has been hurt in the production of this burger.",
+                    Image = File.ReadAllBytes(@"wwwroot\Images\burger7.png"),
+                    ImageContentType = "image/jpeg",
+                },
+				                new Recipe {
+                    Name = "HAM-LET",
+                    Description = "I'm a huff, and I'm a puff, till your choking down this gorgeous burger.",
+                    Image = File.ReadAllBytes(@"wwwroot\Images\burger8.png"),
+                    ImageContentType = "image/jpeg",
+                },
+				                new Recipe {
+                    Name = "WAR AND PEAS",
+                    Description = "This one really does become a mess to eat, but it still is very a-peas-ing.",
+                    Image = File.ReadAllBytes(@"wwwroot\Images\burger9.png"),
+                    ImageContentType = "image/jpeg",
+                },
+				                new Recipe {
+                    Name = "THE CORN SUPREMACY",
+                    Description = "Who said being corny is a bad thing?",
+                    Image = File.ReadAllBytes(@"wwwroot\Images\burger10.png"),
+                    ImageContentType = "image/jpeg",
+                },
+				                new Recipe {
+                    Name = "NEW YOLK CITY",
+                    Description = "Eh yo, just try it! It's Egg-squisite!",
+                    Image = File.ReadAllBytes(@"wwwroot\Images\burger11.png"),
+                    ImageContentType = "image/jpeg",
+                },
+				                new Recipe {
+                    Name = "ADVOCADON'T WORRY, BE HAPPY",
+                    Description = "If you're allergic to avocado's I would advice you advocadon't this burger.",
+                    Image = File.ReadAllBytes(@"wwwroot\Images\burger12.png"),
                     ImageContentType = "image/jpeg",
                 },
             };

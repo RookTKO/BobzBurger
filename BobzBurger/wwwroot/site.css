@@ -210,7 +210,8 @@ header {
 
 
 .recipes .recipe {
-    height: 30em;
+    padding-top:0.3em;
+    height: 15em;
     overflow: hidden;
     text-align: center;
     font-size: 1.1em;
