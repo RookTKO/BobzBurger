@@ -6,16 +6,20 @@
     ViewData["Title"] = recipe.Name;
 }
 
-<div class="row recipe burgerBlackBoard">
-    <div class="col-md-8 ">
-        <div class="col-md-12 ">
-            <span class="description">
-                @recipe.Description
-            </span>
+    <div class="row recipe burgerBlackBoard">
+        <div class="col-6 ">
+            <div class="col-8 text-center">
+                <span class="description">
+                    @recipe.Description
+                </span>
+            </div>
+            <div class="col-2 text-center">
+                <img class="img burgerImage" src="@recipe.GetInlineImageSrc()" />
+            </div>
             <hr />
         </div>
-        <div class="ingredients col-md-4 ">
-            <h4>Ingredients</h4>
+        <div class="ingredients col-6">
+            <h3 class="text-center">Ingredients</h3>
             <ul>
                 @foreach (var ingredient in recipe.IngredientsList)
                 {
@@ -24,8 +28,4 @@
             </ul>
         </div>
     </div>
-    <div class="col-md-4 text-right">
-        <img class="img img-thumbnail" src="@recipe.GetInlineImageSrc()" />
-    </div>
-</div>
 

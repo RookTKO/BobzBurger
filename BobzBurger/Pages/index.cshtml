@@ -18,7 +18,8 @@
                 <br />
             </div>
             <div class="col-4 ">
-                <h4 style="text-align: center;" class="burgerSpecial">@recipes[rInt].Name</h4>
+                <h4 style="text-align: center;" class="burgerSpecial">               <a asp-page="/Recipe" asp-route-id="@recipes[rInt].Id">@recipes[rInt].Name</a></h4>
+ 
                 <br />
             </div>
             <div class=" col-4">
