@@ -1,35 +1,45 @@
 ﻿@page
-@model BobzBurger.Pages.RateUsModel
+@model RateUsModel
 @{
-    ViewData["Title"] = "RateUs";
+    ViewData["Title"] = "Rate Us";
 }
 
-<h2>RateUs</h2>
 
-<form method="post" class="form-horizontal" enctype="multipart/form-data">
-    <div class="form-group">
-        <label asp-for="Comments.Name" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="Comments.Name" class="form-control" />
-            <span asp-validation-for="Comments.Name"></span>
+<div class="row">
+    <form method="post" class="form-horizontal title">
+        <div class="form-group">
+            <label asp-for="Comments.Name" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Comments.Name" class="form-control" />
+                <span asp-validation-for="Comments.Name"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="Comments.Description" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <textarea rows="3" asp-for="Comments.Description" class="form-control"></textarea>
-            <span asp-validation-for="Comments.Description"></span>
+        <div class="form-group">
+            <label asp-for="Comments.Description" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <textarea rows="3" asp-for="Comments.Description" class="form-control"></textarea>
+                <span asp-validation-for="Comments.Description"></span>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="UserImage" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input type="file" asp-for="UserImage" class="form-control" />
+        <div class="form-group">
+            <label asp-for="UserImage" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input type="file" asp-for="UserImage" class="form-control" />
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <button type="submit" class="btn btn-primary">Save</button>
+        <div class="form-group">
+            <label asp-for="Ratings" class="col-md-2 control-label"></label>
+            <div class="ml-2">
+                @foreach (var rating in Model.Ratings)
+                {
+                    <input type="radio" asp-for="Rating" value="@rating" />@rating
+                }
+                </div>
+            </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
+</div>
