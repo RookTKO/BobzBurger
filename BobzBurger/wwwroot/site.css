@@ -73,25 +73,22 @@ body {
 }
 
 .btn-submit {
-    border: 10px solid transparent;
-    background-color: var(--blue_color);
+    border: 10px solid blue;
+    -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
     border-image: url(Images/border.png) 10 stretch;
-    border-image-source: url(Images/border.png);
-    border-image-repeat: stretch;
-    border-image-width: 10px;
+    background-color: var(--blue_color);
     color: black;
     font-family: bobs_burgersregular;
     position: relative;
 }
 .title {
     margin-top: 10px;
-    border: 10px solid transparent;
+    border: 10px solid blue;
     padding: 15px;
-
+    -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
     border-image: url(Images/border.png) 10 stretch;
-    border-image-source: url(Images/border.png);
-    border-image-repeat: stretch;
-    border-image-width: 10px;
     background-color: var(--blue_color);
     color: black;
     font-family: bobs_burgersregular;
@@ -99,12 +96,12 @@ body {
 
 .blackBoard {
     margin-top: 10px;
-    border: 10px solid transparent;
+    border: 10px solid red;
     padding: 15px;
+    -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
     border-image: url(Images/blackBoard.png) 10 stretch;
-    border-image-source: url(Images/blackBoard.png);
-    border-image-repeat: stretch;
-    border-image-width: 10px;
+    border-image-width: 9px;
     background-image: url(Images/blackBoard.jpg);
     color: white;
     font-family: comica_regularregular;
@@ -114,13 +111,16 @@ body {
 }
 
 .burgerBlackBoard {
-    border: 10px solid transparent;
-
-    border-image-source: url(Images/bg.png);
-    border-image-repeat: stretch;
-    border-image-width: 10px;
-    background-color: var(--blue_color);
-    display: inline-block !important;
+    margin-top: 10px;
+    border: 10px solid red;
+    padding: 0px;
+    -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
+    border-image: url(Images/blackBoard.png) 10 stretch;
+    border-image-width: 9px;
+    background-image: url(Images/blackBoard.jpg);
+    color: white;
+    font-family: comica_regularregular
 }
 
     .burgerBlackBoard p {
@@ -166,12 +166,12 @@ header {
         color: rgba(0, 0, 0, 0);
     }
 .nav-pills li {
-    border: 10px solid transparent;
+    border: 10px solid yellow;
     -webkit-border-image: url(Images/navBackground.png) 10 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(Images/blackBoard.png) 10 stretch; /* Opera 11-12.1 */
+    -o-border-image: url(Images/navBackground.png) 10 stretch; /* Opera 11-12.1 */
     border-image-source: url(Images/navBackground.png);
     border-image-repeat: stretch;
-    border-image-width: 10px;
+    border-image-width: 10px !important;
     background-color: var(--blue_color);
     margin: 0px 5px;
     display: inline-block !important;
