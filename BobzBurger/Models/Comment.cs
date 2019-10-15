@@ -6,8 +6,8 @@ namespace BobzBurger.Models
     public class Comment
     {
         public int CommentID { get; set; }
-        public int PhotoID { get; set; }
-        public string UserFirstName { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
         [Required]
         [StringLength(250)]
         public string Subject { get; set; }
