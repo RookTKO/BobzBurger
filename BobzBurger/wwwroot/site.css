@@ -40,13 +40,6 @@ body {
 }
 
 
-.textF {
-    font-size: 0.1em !important;
-    color: red;
-    color: white;
-    font-family: comica_regularregular !important;
-}
-
 .burgerImage {
     margin: 2px;
     padding: 3px;
@@ -77,6 +70,17 @@ body {
     display: flex;
     justify-content: center;
     padding: 10px;
+}
+
+.btn-submit {
+    border: 10px solid transparent;
+    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(Images/border.png) 10 stretch;
+    background-color: var(--blue_color);
+    color: black;
+    font-family: bobs_burgersregular;
+    position: relative;
 }
 .title {
 
@@ -178,9 +182,9 @@ header {
         padding: 0px !important;
         display: block !important;
     }
-        .nav-pills li a:hover, #btn_login:hover {
+        .nav-pills li a:hover, #btn_login:hover, .btn-submit:hover {
             background-color: var(--blue_color);
-            letter-spacing: 2px;
+
             filter: drop-shadow(0 0 0.9rem lightblue);
             text-decoration: underline;
             text-decoration-style: wavy;
