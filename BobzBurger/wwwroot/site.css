@@ -163,7 +163,7 @@ header {
         margin: 80px 0px 20px;
         color: rgba(0, 0, 0, 0);
     }
-.nav-pills li {
+.nav-pills li{
     border: 10px solid transparent;
     -webkit-border-image: url(Images/navBackground.png) 30 round; /* Safari 3.1-5 */
     -o-border-image: url(Images/navBackground.png) 30 round; /* Opera 11-12.1 */
@@ -178,7 +178,7 @@ header {
         padding: 0px !important;
         display: block !important;
     }
-        .nav-pills li a:hover {
+        .nav-pills li a:hover, #btn_login:hover {
             background-color: var(--blue_color);
             letter-spacing: 2px;
             filter: drop-shadow(0 0 0.9rem lightblue);
@@ -194,6 +194,10 @@ header {
             text-transform: none;
         }
 
+#btn_login {
+    min-height: inherit;
+    font-family: bobs_burgersregular !important;
+}
 
 
     .navbar a, .navbar .btn-link {

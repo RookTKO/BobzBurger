@@ -20,7 +20,7 @@
         <div class="row ">
             <nav class="navbar">
                 <ul class="nav nav-pills ">
-                    <li><a class="active" href="/Index">Home Page</a></li>
+                    <li><a @*class="active"*@ href="/Index">Home Page</a></li>
                     <li><a href="/Menu">Our Burgers</a></li>
                     <li><a href="/Comments">Rate us!</a></li>
                     <li><a href="/About">About</a></li>
@@ -33,8 +33,7 @@
                         {
                             <form method="post" asp-page="/Account/Login" asp-page-handler="Logout">
                                 <div class="input-group">
-                                    @*<span>@User.Identity.Name</span>*@
-                                    <btn type="submit" class="btn btn-link">Logout</btn>
+                                    <button id="btn_login" type="submit" class="btn-link">Logout</button>
                                 </div>
                             </form>
                         }
@@ -60,7 +59,7 @@
     <!-- Footer -->
     <footer>
         <div class="text-center">
-            <span class="textF">Test</span>
+            <span>Test</span>
         </div>
             @*<div class="container-fluid text-center text-md-left">
                 <div class="row">
