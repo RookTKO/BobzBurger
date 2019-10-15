@@ -12,10 +12,10 @@
         <div class="row">
             <h1 class="main-logo">
                 <a href="/">Bob's Burgers</a>
-                    <img class="banner" style="transform: rotate(1deg);" src="~/Images/reopening.png" />
+                <img class="banner" style="transform: rotate(1deg);" src="~/Images/reopening.png" />
 
             </h1>
-  
+
         </div>
         <div class="row ">
             <nav class="navbar">
@@ -34,7 +34,7 @@
                             <form method="post" asp-page="/Account/Login" asp-page-handler="Logout">
                                 <div class="input-group">
                                     @*<span>@User.Identity.Name</span>*@
-                                    <a href="" type="submit" class="btn btn-link">Logout</a>
+                                    <btn type="submit" class="btn btn-link">Logout</btn>
                                 </div>
                             </form>
                         }
@@ -54,13 +54,45 @@
         </div>
     </header>
     <div class="container">
-    
+
         @RenderBody()
     </div>
+    <!-- Footer -->
     <footer>
         <div class="text-center">
-            <span class="text-muted">Last Rendered:  @DateTime.Now  </span>
+            <span class="textF">Test</span>
         </div>
+            @*<div class="container-fluid text-center text-md-left">
+                <div class="row">
+                    <div class="col-md-6  ">
+                        <p class="">Here you can use rows and columns to organize your footer content.</p>
+                    </div>
+                    <hr class="clearfix w-100 d-md-none pb-3">
+                    <div class="col-md-3 mb-md-0 mb-3">
+                        <h5 class="text-uppercase">Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright text-center py-3">
+                Copyright the Belchers
+            </div>*@
+            <!-- Copyright -->
+
     </footer>
+    <!-- Footer -->
 </body>
 </html>
