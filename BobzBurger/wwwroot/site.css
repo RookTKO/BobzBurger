@@ -74,8 +74,8 @@ body {
 
 .btn-submit {
     border: 10px solid transparent;
-    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
-    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
     border-image: url(Images/border.png) 10 stretch;
     background-color: var(--blue_color);
     color: black;
@@ -83,25 +83,23 @@ body {
     position: relative;
 }
 .title {
-
     margin-top: 10px;
     border: 10px solid transparent;
     padding: 15px;
-    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
-    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
     border-image: url(Images/border.png) 10 stretch;
     background-color: var(--blue_color);
     color: black;
     font-family: bobs_burgersregular;
-
 }
 
 .blackBoard {
     margin-top: 10px;
     border: 10px solid transparent;
     padding: 15px;
-    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
-    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
     border-image: url(Images/blackBoard.png) 10 stretch;
     border-image-width: 9px;
     background-image: url(Images/blackBoard.jpg);
@@ -116,8 +114,8 @@ body {
     margin-top: 10px;
     border: 10px solid transparent;
     padding: 0px;
-    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
-    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
     border-image: url(Images/blackBoard.png) 10 stretch;
     border-image-width: 9px;
     background-image: url(Images/blackBoard.jpg);
@@ -167,15 +165,15 @@ header {
         margin: 80px 0px 20px;
         color: rgba(0, 0, 0, 0);
     }
-.nav-pills li{
+.nav-pills li {
     border: 10px solid transparent;
-    -webkit-border-image: url(Images/navBackground.png) 30 round; /* Safari 3.1-5 */
-    -o-border-image: url(Images/navBackground.png) 30 round; /* Opera 11-12.1 */
+    -webkit-border-image: url(Images/navBackground.png) 10 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(Images/navBackground.png) 10 stretch; /* Opera 11-12.1 */
     border-image: url(Images/navBackground.png) 10 stretch;
     border-image-width: 9px !important;
     background-color: var(--blue_color);
     margin: 0px 5px;
-    display:inline-block !important;
+    display: inline-block !important;
 }
 
     .nav-pills li a {
