@@ -76,7 +76,9 @@ body {
     border: 10px solid transparent;
     -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
     -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
-    border-image: url(Images/border.png) 10 stretch;
+    border-image-source: url(Images/border.png);
+    border-image-repeat: stretch;
+    border-image-width: 10px !important;
     background-color: var(--blue_color);
     color: black;
     font-family: bobs_burgersregular;
@@ -88,7 +90,9 @@ body {
     padding: 15px;
     -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
     -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
-    border-image: url(Images/border.png) 10 stretch;
+    border-image-source: url(Images/border.png);
+    border-image-repeat: stretch;
+    border-image-width: 10px !important;
     background-color: var(--blue_color);
     color: black;
     font-family: bobs_burgersregular;
@@ -100,8 +104,9 @@ body {
     padding: 15px;
     -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
     -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
-    border-image: url(Images/blackBoard.png) 10 stretch;
-    border-image-width: 9px;
+    border-image-source: url(Images/border.png);
+    border-image-repeat: stretch;
+    border-image-width: 10px !important;
     background-image: url(Images/blackBoard.jpg);
     color: white;
     font-family: comica_regularregular;
@@ -116,8 +121,9 @@ body {
     padding: 0px;
     -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
     -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
-    border-image: url(Images/blackBoard.png) 10 stretch;
-    border-image-width: 9px;
+    border-image-source: url(Images/blackBoard.png);
+    border-image-repeat: stretch;
+    border-image-width: 10px !important;
     background-image: url(Images/blackBoard.jpg);
     color: white;
     font-family: comica_regularregular
@@ -169,8 +175,9 @@ header {
     border: 10px solid transparent;
     -webkit-border-image: url(Images/navBackground.png) 10 stretch; /* Safari 3.1-5 */
     -o-border-image: url(Images/navBackground.png) 10 stretch; /* Opera 11-12.1 */
-    border-image: url(Images/navBackground.png) 10 stretch;
-    border-image-width: 9px !important;
+    border-image-source: url(Images/navBackground.png);
+    border-image-repeat: stretch;
+    border-image-width: 10px !important;
     background-color: var(--blue_color);
     margin: 0px 5px;
     display: inline-block !important;
