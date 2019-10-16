@@ -8,7 +8,7 @@ This site was made from a modified version of [Jess Chadwick's ASP.NET CORE RAZO
 
 Burger art by [geeksweetie](https://www.redbubble.com/people/geeksweetie?ref=artist_title_name) at RedBubble. Go check geeksweetie awesome artwork out!
 
-To use the authenication login in it use the following username and password:
+To use the authenication login use the following username and password:
 
 > **username:** bob@bobsburger.com
 
