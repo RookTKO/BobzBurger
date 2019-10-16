@@ -2,7 +2,6 @@
 @{
     var id = long.Parse((string)RouteData.Values["id"]);
     var recipe = await RecipesService.FindAsync(id);
-
     ViewData["Title"] = recipe.Name;
 }
 

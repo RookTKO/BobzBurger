@@ -6,11 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\Recipe.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\Recipe.cshtml" />
     <None Include="wwwroot\fonts\glyphicons-halflings-regular.svg" />
     <None Include="wwwroot\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="wwwroot\Images\burger.jpg" />
@@ -22,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Pages\tret.cshtml">
+    <Content Update="Pages\Burgers.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Update="Pages\Comments.cshtml">
