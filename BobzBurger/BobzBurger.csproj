@@ -22,6 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Pages\tret.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Pages\Comments.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

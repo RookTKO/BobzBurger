@@ -40,7 +40,17 @@ namespace BobzBurger
             app.UseAuthentication();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+            //app.UseMvc(routes =>
+            //{
+            //    // need route and attribute on controller: [Area("Blogs")]
+            //    routes.MapRoute(name: "mvcAreaRoute",
+            //                    template: "Recipe/1");
 
+            //    // default route for non-areas
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Home}/{action=Index}/{id?}");
+            //});
         }
     }
 }
