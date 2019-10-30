@@ -118,7 +118,7 @@ body {
     -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
     border-image: url(Images/blackBoard.png) 10 stretch;
     border-image-width: 9px;
-    background-image: url(Images/blackBoard.jpg);
+    background-image: url(Images/Bb_background.jpg);
     color: white;
     font-family: comica_regularregular
 }
