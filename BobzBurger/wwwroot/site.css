@@ -46,6 +46,26 @@ body {
     font-weight: bold;
 }
 
+.formTextSize{
+    font-size: 2rem;
+}
+
+.cutomerHeadingForm {
+    border-bottom: 2px outset lightblue;
+}
+.commentImage {
+    margin-top: 25%;
+    margin-bottom: 25%;
+    width: 250px;
+    max-height: 250px;
+    border: 10px solid blue;
+    -webkit-border-image: url(border.png) 10 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 10 stretch; /* Opera 11-12.1 */
+    border-image: url(Images/border.png) 10 stretch;
+    background-color: var(--blue_color);
+    color: black;
+}
+
 .burgerImage {
     margin: 2px;
     padding: 3px;
