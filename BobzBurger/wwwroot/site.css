@@ -40,6 +40,12 @@ body {
 }
 
 
+.formFieldRevert {
+    font-family: comica_regularregular;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+}
+
 .burgerImage {
     margin: 2px;
     padding: 3px;
