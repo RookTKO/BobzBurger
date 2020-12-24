@@ -13,3 +13,8 @@ To use the authenication login use the following username and password:
 > **username:** bob@bobsburger.com
 
 > **password:** kuchikopi
+
+### Images from the site:
+![Main Site](https://raw.githubusercontent.com/RookTKO/BobzBurger/master/BobzBurger/wwwroot/Images/screencapture-bobzburger-azurewebsites-net-1573527608132.png)
+![Chosen Burger](https://raw.githubusercontent.com/RookTKO/BobzBurger/master/BobzBurger/wwwroot/Images/screencapture-bobzburger-azurewebsites-net-Burgers-2-1573527658367.png)
+![Burger List](https://raw.githubusercontent.com/RookTKO/BobzBurger/master/BobzBurger/wwwroot/Images/screencapture-bobzburger-azurewebsites-net-Menu-1573527625284.png)
